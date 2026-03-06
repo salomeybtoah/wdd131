@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>WDD 131 - Dynamic Web Fundamentals - Salomey Bempomaa Toah</title>
-
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Salomey Bempomaa Toah. Course homepage featuring an about me section, web development learning, HTML, CSS, JavaScript, and useful web development resources.">
-
     <meta name="author" content="Salomey Bempomaa Toah">
-
-    <link rel="stylesheet" href="styles/base.css">
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts - THIS WAS MISSING -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Load CSS asynchronously (non-render-blocking) -->
+    <link rel="preload" href="styles/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles/base.css"></noscript>
+    
+    <!-- Deferred JavaScript -->
+    <script src="scripts/getdates.js" defer></script>
 </head>
-
 <body>
 
 <header>
