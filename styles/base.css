@@ -1,8 +1,4 @@
 /* base.css - WDD 131 Dynamic Web Fundamentals */
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
-
 /* CSS Variables with Teal Color Schema */
 :root {
     --teal-dark: #004d4d;       /* Dark teal - primary brand color */
