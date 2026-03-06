@@ -106,6 +106,7 @@ h1 {
     margin: 2rem 0;
     position: relative;
     padding-bottom: 1rem;
+    min-height: calc(2.5rem + 1rem + 4px);
 }
 
 /* Decorative underline for h1 using medium teal */
@@ -161,22 +162,31 @@ h1 {
 }
 
 .card img {
-    width: 150px;
-    height: auto;
-    max-width: 100%;
-    max-height: 150px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    float: right;  /* Image floats to the right */
-    margin: 0 0 1rem 1.5rem;  /* Top:0, Right:0, Bottom:1rem, Left:1.5rem */
+    float: right;
+    margin: 0 0 1rem 1.5rem;
     border-radius: 8px;
     border: 3px solid var(--teal-medium);
     transition: opacity 0.3s ease, border-color 0.3s ease;
     shape-outside: border-box;
+    /* Prevent layout shift while loading */
+    aspect-ratio: 1/1;
+    background-color: #f0f0f0; /* Placeholder color while loading */
 }
 
 .card:nth-child(3) img {
-    float: left;  /* Flag floats to the left */
-    margin: 0 1.5rem 1rem 0;  /* Right margin instead of left */
+    width: 120px;
+    height: 80px;
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid var(--teal-medium);
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+    background-color: #f0f0f0;
 }
 
 .card img:hover {
@@ -226,6 +236,7 @@ footer p {
     color: #ffe570;  /* Golden yellow */
     font-size: 0.9rem;
     font-style: italic;
+    min-height: 1.5rem; /* Adjust based on your content */
 }
 
 /* Responsive Design */
