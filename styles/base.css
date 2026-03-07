@@ -3,6 +3,7 @@
 :root {
     --teal-dark: #004d4d;       /* Dark teal - primary brand color */
     --teal-medium: #008080;      /* Medium teal - secondary brand color */
+    --teal-ocean: #006994;
     --accent-color: #f39c12;     /* Orange accent - for highlights */
     --background-light: #f8f9fa; /* Light gray - page background */
     --text-dark: #2c3e50;        /* Dark blue-gray - main text */
