@@ -163,7 +163,7 @@ h1::after {
     border-radius: 8px;
     border: 3px solid var(--teal-medium);
     transition: opacity 0.3s ease, border-color 0.3s ease;
-    shape-outside: border-box;
+    shape-outside: margin-box;
     /* Prevent layout shift while loading */
     aspect-ratio: 1/1;
     background-color: #f0f0f0; /* Placeholder color while loading */
