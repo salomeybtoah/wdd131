@@ -3,7 +3,6 @@
 :root {
     --teal-dark: #004d4d;       /* Dark teal - primary brand color */
     --teal-medium: #008080;      /* Medium teal - secondary brand color */
-    --teal-ocean: #006994;
     --accent-color: #f39c12;     /* Orange accent - for highlights */
     --background-light: #f8f9fa; /* Light gray - page background */
     --text-dark: #2c3e50;        /* Dark blue-gray - main text */
@@ -53,7 +52,7 @@ header {
 }
 
 nav {
-    background-color: var(--teal-ocean, #008080);  /* Ocean teal */
+    background-color: #008080;  /* Ocean teal */
     width: 100%;
 }
 
@@ -95,6 +94,10 @@ main {
     margin: 2rem auto;
     padding: 0 1rem;
     flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
 }
 
 /* Main heading */
@@ -108,6 +111,7 @@ h1 {
     position: relative;
     padding-bottom: 1rem;
     min-height: calc(2.5rem + 1rem + 4px);
+    grid-column: 1 / -1;
 }
 
 /* Decorative underline for h1 using medium teal */
@@ -121,18 +125,6 @@ h1::after {
     height: 4px;
     background-color: var(--teal-medium);
     border-radius: 2px;
-}
-
-/* CSS Grid Layout for Cards */
-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-/* Make h1 span both columns */
-h1 {
-    grid-column: 1 / -1;
 }
 
 /* Card Styles */
