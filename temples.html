@@ -11,15 +11,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Optimized Google Fonts - loads without blocking render -->
+    <!-- Optimized Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     </noscript>
     
-    <!-- CSS files - Mobile-first order -->
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="styless/temples.css" as="style">
+    
+    <!-- Critical mobile CSS - loads immediately -->
     <link rel="stylesheet" href="styless/temples.css">
-    <link rel="stylesheet" href="styless/temples-large.css">
+    
+    <!-- Desktop CSS - loads asynchronously -->
+    <link rel="stylesheet" href="styless/temples-large.css" 
+          media="print" 
+          onload="this.media='screen and (min-width: 768px)'">
+    <noscript>
+        <link rel="stylesheet" href="styless/temples-large.css" media="screen and (min-width: 768px)">
+    </noscript>
     
     <!-- Deferred JavaScript -->
     <script src="script/temple.js" defer></script>
