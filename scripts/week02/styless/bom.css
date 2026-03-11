@@ -1,0 +1,95 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Acme', sans-serif;
+}
+
+main {
+	margin: 1rem auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	background-color: #ddd;
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+}
+
+h1 {
+	margin: 0 0 1rem;
+	font-size: 1.8rem;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.2rem;
+}
+
+input {
+	padding: 0.5rem;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+
+input::placeholder {
+	color: #aaa;
+	font-style: italic;
+}
+
+button {
+	padding: 0.5rem 1rem;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	width: 100%;  /* Button now matches input width */
+}
+
+button:hover {
+	background-color: #555;
+}
+
+ul {
+	margin: 1rem 0 0;
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem;
+	border: 1px solid #bbb;
+	background-color: #eee;
+	margin-bottom: 0.5rem;
+}
+
+
+li button {
+    border: 1px;   /* Temporary to see the button container */
+    background: none;
+    color: #333;
+    font-size: 1.2rem;
+    padding: 0 0.3rem;
+    width: auto;
+}
+li button:hover {
+	background-color: transparent;
+	color: #c00;
+}

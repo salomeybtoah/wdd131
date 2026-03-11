@@ -1,0 +1,121 @@
+/* temples-large.css - Styles for viewports 768px and above */
+
+@media screen and (min-width: 768px) {
+    
+    /* Header with flex row layout */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #003333;  /* Deep teal - no gradient */
+    }
+    
+    header h1 {
+        margin-bottom: 0;
+        font-size: 2rem;
+        color: white;  /* Ensure white */
+    }
+    
+    /* Navigation - Flex row for larger screens */
+    nav ul {
+        flex-direction: row;
+        gap: 1.5rem;
+        display: flex !important;
+    }
+    
+    nav a {
+        padding: 0.5rem 1.5rem;
+        background-color: transparent;  /* Transparent background on desktop */
+        color: white;  /* White text */
+        position: relative;
+    }
+    
+    /* Underline effect on hover for larger screens */
+    nav a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #99c2c2;  /* Light teal underline */
+        transition: width 0.3s ease;
+    }
+    
+    nav a:hover::after {
+        width: 70%;
+    }
+    
+    nav a:hover {
+        background-color: transparent;  /* Keep transparent on hover */
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: none;
+    }
+    
+    /* Hide hamburger button on larger screens */
+    #hamburger-btn {
+        display: none !important;
+    }
+    
+    /* Main content */
+    main {
+        max-width: 1200px;
+        padding: 2rem;
+    }
+    
+    main h1 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #003333;
+    }
+    
+    main h1::after {
+        background-color: #003333;
+    }
+    
+    /* CSS Grid for larger screens */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    @media screen and (min-width: 1024px) {
+        .grid-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    figure {
+        margin-bottom: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    figcaption {
+        margin-top: auto;
+        color: #003333;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 2rem;
+        font-size: 1rem;
+        background-color: #003333;
+    }
+}
+
+/* Extra large screens */
+@media screen and (min-width: 1400px) {
+    main {
+        padding: 2rem 0;
+    }
+    
+    .grid-container {
+        gap: 2.5rem;
+    }
+}
