@@ -1,74 +1,84 @@
-// temples.js - Hamburger menu and footer functionality
+// temples.js - Optimized version
 
-// Get current year and last modified date for footer
+// Use a single DOMContentLoaded listener with optimized code
 document.addEventListener('DOMContentLoaded', function() {
-    // Set current year in footer
-    const currentYear = new Date().getFullYear();
-    document.getElementById('currentyear').textContent = currentYear;
+    // --- FOOTER UPDATES (lightweight) ---
+    const currentYearSpan = document.getElementById('currentyear');
+    const lastModifiedP = document.getElementById('lastModified');
     
-    // Set last modified date with specific format: MM/DD/YYYY HH:MM:SS
-    const lastModified = new Date(document.lastModified);
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
     
-    const year = lastModified.getFullYear();
-    const month = String(lastModified.getMonth() + 1).padStart(2, '0');
-    const day = String(lastModified.getDate()).padStart(2, '0');
-    const hours = String(lastModified.getHours()).padStart(2, '0');
-    const minutes = String(lastModified.getMinutes()).padStart(2, '0');
-    const seconds = String(lastModified.getSeconds()).padStart(2, '0');
+    if (lastModifiedP) {
+        const lastMod = new Date(document.lastModified);
+        // Use Intl.DateTimeFormat for better performance than multiple padStart calls
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            month: '2-digit',
+            day: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+        
+        // Format: MM/DD/YYYY HH:MM:SS
+        const parts = formatter.formatToParts(lastMod);
+        const dateObj = {};
+        parts.forEach(part => dateObj[part.type] = part.value);
+        
+        const formattedDate = `Last Modification: ${dateObj.month}/${dateObj.day}/${dateObj.year} ${dateObj.hour}:${dateObj.minute}:${dateObj.second}`;
+        lastModifiedP.textContent = formattedDate;
+    }
     
-    const formattedDate = `Last Modification: ${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
-    
-    document.getElementById('lastModified').textContent = formattedDate;
-    
-    // Hamburger menu functionality
-    setupHamburgerMenu();
+    // --- HAMBURGER MENU (only setup on mobile) ---
+    // Only run hamburger code if we're actually on mobile
+    if (window.innerWidth < 768) {
+        setupMobileHamburger();
+    }
 });
 
-function setupHamburgerMenu() {
-    // Create hamburger button
+// Simplified hamburger setup - only runs on mobile
+function setupMobileHamburger() {
     const header = document.querySelector('header');
     const nav = document.querySelector('nav');
     const navUl = document.querySelector('nav ul');
     
-    // Create hamburger button element
+    if (!header || !nav || !navUl) return;
+    
+    // Create button once
     const hamburgerBtn = document.createElement('button');
     hamburgerBtn.id = 'hamburger-btn';
-    hamburgerBtn.innerHTML = '☰'; // Hamburger icon
+    hamburgerBtn.innerHTML = '☰';
     hamburgerBtn.setAttribute('aria-label', 'Toggle navigation menu');
-    
-    // Insert hamburger button before the nav in the header
     header.insertBefore(hamburgerBtn, nav);
     
-    // Add click event to toggle menu
-    hamburgerBtn.addEventListener('click', () => {
+    // Click handler
+    hamburgerBtn.addEventListener('click', function() {
         navUl.classList.toggle('show');
-        
-        // Toggle between hamburger and X icon
-        if (navUl.classList.contains('show')) {
-            hamburgerBtn.innerHTML = '✕'; // X icon when menu is open
-        } else {
-            hamburgerBtn.innerHTML = '☰'; // Hamburger icon when menu is closed
-        }
+        this.innerHTML = navUl.classList.contains('show') ? '✕' : '☰';
     });
     
-    // Handle window resize - hide hamburger on larger screens and ensure menu is visible
-    window.addEventListener('resize', () => {
-        if (window.innerWidth >= 768) {
-            navUl.classList.remove('show');
-            navUl.style.display = 'flex'; // Ensure nav is visible on larger screens
-            hamburgerBtn.style.display = 'none'; // Hide hamburger on larger screens
-        } else {
-            navUl.style.display = ''; // Reset to CSS default
-            hamburgerBtn.style.display = 'block'; // Show hamburger on mobile
-            // Reset to hamburger icon when resizing to mobile
-            hamburgerBtn.innerHTML = '☰';
-        }
+    // Simple resize handler
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            if (window.innerWidth >= 768) {
+                navUl.classList.remove('show');
+                navUl.style.display = 'flex';
+                hamburgerBtn.style.display = 'none';
+            } else {
+                navUl.style.display = '';
+                hamburgerBtn.style.display = 'block';
+                hamburgerBtn.innerHTML = '☰';
+            }
+        }, 100); // Debounce resize events
     });
     
-    // Initial check on page load
-    if (window.innerWidth >= 768) {
-        hamburgerBtn.style.display = 'none';
-    } else {
-        hamburgerBtn.style.display = 'block';
-    }
+    // Initial display
+    hamburgerBtn.style.display = 'block';
 }
+
+// Remove the window.innerWidth check that was running twice
