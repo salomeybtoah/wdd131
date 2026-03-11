@@ -1,84 +1,61 @@
-// temples.js - Optimized version
-
-// Use a single DOMContentLoaded listener with optimized code
-document.addEventListener('DOMContentLoaded', function() {
-    // --- FOOTER UPDATES (lightweight) ---
-    const currentYearSpan = document.getElementById('currentyear');
+/// temples.js - Fully optimized version
+document.addEventListener('DOMContentLoaded', () => {
+    // --- FOOTER ---
+    const yearSpan = document.getElementById('currentyear');
     const lastModifiedP = document.getElementById('lastModified');
-    
-    if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
+
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
     }
-    
+
     if (lastModifiedP) {
         const lastMod = new Date(document.lastModified);
-        // Use Intl.DateTimeFormat for better performance than multiple padStart calls
-        const formatter = new Intl.DateTimeFormat('en-US', {
-            month: '2-digit',
-            day: '2-digit',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: false
-        });
-        
-        // Format: MM/DD/YYYY HH:MM:SS
-        const parts = formatter.formatToParts(lastMod);
-        const dateObj = {};
-        parts.forEach(part => dateObj[part.type] = part.value);
-        
-        const formattedDate = `Last Modification: ${dateObj.month}/${dateObj.day}/${dateObj.year} ${dateObj.hour}:${dateObj.minute}:${dateObj.second}`;
-        lastModifiedP.textContent = formattedDate;
+        lastModifiedP.textContent = `Last Modification: ${lastMod.toLocaleString()}`;
     }
-    
-    // --- HAMBURGER MENU (only setup on mobile) ---
-    // Only run hamburger code if we're actually on mobile
-    if (window.innerWidth < 768) {
-        setupMobileHamburger();
-    }
-});
 
-// Simplified hamburger setup - only runs on mobile
-function setupMobileHamburger() {
+    // --- NAVIGATION MENU (Mobile + Desktop) ---
     const header = document.querySelector('header');
     const nav = document.querySelector('nav');
-    const navUl = document.querySelector('nav ul');
-    
+    const navUl = nav?.querySelector('ul');
+
     if (!header || !nav || !navUl) return;
-    
-    // Create button once
+
+    // Create hamburger button (only once)
     const hamburgerBtn = document.createElement('button');
     hamburgerBtn.id = 'hamburger-btn';
-    hamburgerBtn.innerHTML = '☰';
     hamburgerBtn.setAttribute('aria-label', 'Toggle navigation menu');
+    hamburgerBtn.innerHTML = '☰';
     header.insertBefore(hamburgerBtn, nav);
-    
-    // Click handler
-    hamburgerBtn.addEventListener('click', function() {
+
+    // Function to toggle menu visibility
+    const toggleMenu = () => {
         navUl.classList.toggle('show');
-        this.innerHTML = navUl.classList.contains('show') ? '✕' : '☰';
-    });
-    
-    // Simple resize handler
+        hamburgerBtn.innerHTML = navUl.classList.contains('show') ? '✕' : '☰';
+    };
+
+    // Click event for hamburger
+    hamburgerBtn.addEventListener('click', toggleMenu);
+
+    // Handle window resize with debounce
     let resizeTimer;
-    window.addEventListener('resize', function() {
+    const handleResize = () => {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
+        resizeTimer = setTimeout(() => {
             if (window.innerWidth >= 768) {
+                // Desktop view: show menu, hide hamburger
                 navUl.classList.remove('show');
-                navUl.style.display = 'flex';
                 hamburgerBtn.style.display = 'none';
+                navUl.style.display = 'flex';
             } else {
-                navUl.style.display = '';
+                // Mobile view: hide menu by default, show hamburger
                 hamburgerBtn.style.display = 'block';
+                navUl.style.display = '';
                 hamburgerBtn.innerHTML = '☰';
             }
-        }, 100); // Debounce resize events
-    });
-    
-    // Initial display
-    hamburgerBtn.style.display = 'block';
-}
+        }, 100);
+    };
 
-// Remove the window.innerWidth check that was running twice
+    // Run on load and on resize
+    handleResize();
+    window.addEventListener('resize', handleResize);
+});
