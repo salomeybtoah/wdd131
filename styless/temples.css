@@ -142,9 +142,8 @@ figure:hover {
 img {
     width: 100%;
     height: 200px;
-    display: block;
-    aspect-ratio: 16 / 9;
-    border-bottom: 3px solid #003333;  /* Deep teal border */
+    object-fit: cover;
+    display: block; 
 }
 
 figcaption {
