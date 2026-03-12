@@ -57,6 +57,14 @@ nav a {
     transition: all 0.3s ease;
 }
 
+/* Force all navigation text to white */
+nav,
+nav ul,
+nav ul li,
+nav a {
+    color: white;
+}
+
 /* Hover effect - lighter teal but keeping white text */
 nav a:hover {
     background-color: #006666;  /* Lighter teal on hover */
