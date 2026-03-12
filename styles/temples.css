@@ -177,7 +177,7 @@ figcaption {
 
 /* Footer styles */
 footer {
-    background-color: #003333;  /* Match header deep teal */
+    background-color: #003333;
     color: white;
     text-align: center;
     padding: 1.5rem;
@@ -188,11 +188,12 @@ footer {
 
 footer p {
     margin: 0.3rem 0;
-    color: white;  /* White text in footer */
+    color: white;
 }
 
 #lastModified {
-    color: #99c2c2;  /* Light teal for contrast */
+    color: white;  /* Changed from #99c2c2 to white */
     font-size: 0.8rem;
     font-weight: 500;
+    opacity: 0.9;  /* Optional: gives a slight visual distinction */
 }
