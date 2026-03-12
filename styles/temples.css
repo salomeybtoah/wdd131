@@ -37,6 +37,19 @@ header h1 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
+/* Make sure ALL text in header is white */
+header,
+header h1,
+header nav,
+header nav ul,
+header nav li,
+header nav a,
+header #hamburger-btn,
+header p,
+header span {
+    color: white;
+}
+
 /* Navigation - Flex column for mobile */
 nav ul {
     list-style: none;
@@ -55,14 +68,6 @@ nav a {
     border-radius: 4px;
     font-weight: 600;
     transition: all 0.3s ease;
-}
-
-/* Force all navigation text to white */
-nav,
-nav ul,
-nav ul li,
-nav a {
-    color: white;
 }
 
 /* Hover effect - lighter teal but keeping white text */
