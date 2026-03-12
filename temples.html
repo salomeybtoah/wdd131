@@ -17,19 +17,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     </noscript>
     
-   <!-- Preload and load critical CSS in one -->
-<link rel="preload" href="styles/temples.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="styles/temples.css">
-</noscript>
+  <!-- Critical mobile CSS -->
+<link rel="stylesheet" href="styles/temples.css">
 
-<!-- Desktop CSS - loads asynchronously -->
-<link rel="stylesheet" href="styles/temples-large.css" 
-      media="print" 
-      onload="this.media='screen and (min-width: 768px)'">
-<noscript>
-    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
-</noscript>
+<!-- Desktop CSS -->
+<link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
     
     <!-- Deferred JavaScript -->
     <script src="script/temple.js" defer></script>
