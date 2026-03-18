@@ -1,10 +1,8 @@
 // place.js
 
-// Static values (must match HTML)
 const temperature = 31;
 const windSpeed = 12;
 
-// Run when page loads
 document.addEventListener('DOMContentLoaded', () => {
     setFooterInfo();
     displayWindChill();
@@ -19,7 +17,9 @@ function setFooterInfo() {
 
 /* WIND CHILL CALCULATION */
 function calculateWindChill(temp, wind) {
-    return 13.12 + (0.6215 * temp) - (11.37 * wind ** 0.16) + (0.3965 * temp * wind ** 0.16);
+    return 13.12 + (0.6215 * temp)
+        - (11.37 * Math.pow(wind, 0.16))
+        + (0.3965 * temp * Math.pow(wind, 0.16));
 }
 
 /* DISPLAY WIND CHILL */

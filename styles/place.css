@@ -87,7 +87,7 @@ h1 {
 /* CONTENT INSIDE CARD */
 .data-list,
 .weather-data {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7); /* 🔥 transparent white */
     padding: 2rem;
     padding-top: 6rem; /* creates space for header */
     border-radius: 4px;
