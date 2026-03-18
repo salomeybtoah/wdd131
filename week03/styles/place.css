@@ -1,0 +1,134 @@
+/* place.css */
+
+:root {
+    --ocean-teal: #009688;
+    --sand-beige: #FFF8E7;
+    --navy: #004D40;
+    --text-dark: #333333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--sand-beige);
+    color: var(--text-dark);
+}
+
+/* HEADER */
+header {
+    background-color: var(--navy);
+    text-align: center;
+    padding: 2rem;
+     border-bottom: 17px solid var(--sand-beige);
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* CARDS (MOBILE = STACKED) */
+.card {
+    position: absolute;
+    width: 320px;
+    background-color: transparent; /* teal background */
+    border-radius: 6px;
+}
+
+/* HEADER BAR (IMPORTANT) */
+.card h2 {
+    position: relative;
+
+    top: 70px;     /* 🔥 lifts it above the white box */
+    left: -3%;    /* 🔥 pushes it outside to the left */
+
+    background-color: var(--ocean-teal);
+    color: white;
+
+    padding: 0.6rem 1.9rem;
+    font-size: 1.6rem;
+
+    z-index: 2;     /* ensures it sits above white */
+}
+
+.data-list li {
+    padding-left: 10px; /* slight shift like wireframe */
+}
+
+.data-list {
+    list-style: none;   /* removes bullets */
+    padding-left: 0;    /* removes left indent */
+    margin: 0;
+    min-height: 340px;
+}
+
+.weather-data {
+    min-height: 220px;
+}
+
+/* CONTENT INSIDE CARD */
+.data-list,
+.weather-data {
+    background-color: white;
+    padding: 2rem;
+    padding-top: 6rem; /* creates space for header */
+    border-radius: 4px;
+}
+
+/* ROW ITEMS */
+.data-list li,
+.weather-data p {
+    background-color: transparent; /* ✅ no color */
+    color: var(--navy); /* deep teal text */
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+    color: black;
+}
+
+/* 🔥 UNEVEN TEXT - DATA */
+.data-list li:nth-child(1) { margin-left: 20px; }
+.data-list li:nth-child(2) { margin-left: 0; }
+.data-list li:nth-child(3) { margin-left: 15px; }
+.data-list li:nth-child(4) { margin-left: 5px; }
+.data-list li:nth-child(5) { margin-left: 18px; }
+.data-list li:nth-child(6) { margin-left: 0; }
+.data-list li:nth-child(7) { margin-left: 12px; }
+.data-list li:nth-child(8) { margin-left: 3px; }
+
+/* 🔥 UNEVEN TEXT - WEATHER */
+.weather-data p:nth-child(1) { margin-left: 10px; }
+.weather-data p:nth-child(2) { margin-left: 0; }
+.weather-data p:nth-child(3) { margin-left: 12px; }
+.weather-data p:nth-child(4) { margin-left: 2px; }
+
+/* LABELS */
+.label {
+    color: var(--coral);
+    font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}

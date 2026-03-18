@@ -1,0 +1,62 @@
+@media screen and (min-width: 768px) {
+
+    /* HERO FULL SCREEN LOOK */
+    .hero {
+    position: relative;
+    height: 100vh; /* FULL SCREEN */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    /* CARDS OVERLAY */
+    .card {
+        position: absolute;
+        width: 300px;
+        
+    }
+
+    /* DATA (LEFT SIDE) */
+   .data {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    transform: translateX(-99px); /* 🔥 push slightly OUT */
+}
+
+.weather {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    transform: translateX(99px); /* 🔥 push slightly OUT */
+}
+
+    /* WEATHER ICON (REQUIRED) */
+    .weather h2::after {
+        content: "⛅ ";
+        margin-left: 5px;
+    }
+
+    /* STRONGER TITLE */
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* LARGE SCREENS */
+@media screen and (min-width: 1024px) {
+    .card {
+        width: 300px;
+    }
+
+    .data {
+        left: 8%;
+    }
+
+    .weather {
+        right: 8%;
+    }
+}

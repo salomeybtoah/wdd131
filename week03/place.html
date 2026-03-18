@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maldives | Tropical Paradise</title>
+    <meta name="description" content="Discover the beauty of Maldives - crystal clear waters and sandy beaches">
+    <meta name="author" content="Salomey Bempomaa Toah">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Maldives</h1>
+    </header>
+    
+    <main>
+
+        <!-- HERO SECTION (IMPORTANT: cards are inside) -->
+        <div class="hero">
+
+            <!-- Responsive Image -->
+            <picture>
+                <source srcset="images/maldives-large.webp" media="(min-width: 768px)">
+                <source srcset="images/maldives-small.webp" media="(max-width: 767px)">
+                <img src="images/maldives-small.webp" alt="Beautiful Maldives overwater bungalows with turquoise water">
+            </picture>
+
+            <!-- DATA CARD -->
+            <section class="data card">
+                <h2>Data</h2>
+                <ul class="data-list">
+                    <li><span class="label">Area:</span> 298 sq km</li>
+                    <li><span class="label">Population:</span> 540,000</li>
+                    <li><span class="label">Capital:</span> Malé</li>
+                    <li><span class="label">Languages:</span> Dhivehi</li>
+                    <li><span class="label">Currency:</span> Rufiyaa</li>
+                    <li><span class="label">Time Zone:</span> UTC+5</li>
+                    <li><span class="label">Calling Code:</span> +960</li>
+                    <li><span class="label">Internet TLD:</span> .mv</li>
+                </ul>
+            </section>
+
+            <!-- WEATHER CARD -->
+            <section class="weather card">
+                <h2>Weather ⛅</h2>
+                <div class="weather-data">
+                    <p><span class="label">Temperature:</span> <span id="temp">31</span>°C</p>
+                    <p><span class="label">Conditions:</span> Partly Cloudy</p>
+                    <p><span class="label">Wind:</span> <span id="wind">12</span> km/h</p>
+                    <p><span class="label">Wind Chill:</span> <span id="windchill"></span></p>
+                </div>
+            </section>
+
+        </div>
+        
+    </main>
+    
+    <!-- FOOTER -->
+    <footer>
+        <p>©<span id="currentyear"></span> 🐠 Salomey Bempomaa Toah 🐠 Maldives</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
