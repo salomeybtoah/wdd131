@@ -28,6 +28,25 @@ header {
      border-bottom: 17px solid var(--sand-beige);
 }
 
+/* 🔥 MOBILE HEADER FIX ONLY */
+@media screen and (max-width: 767px) {
+    header {
+        padding: 0.8rem; /* smaller like wireframe */
+        border-bottom: none; /* remove big beige line */
+    }
+
+    header::after {
+        content: "";
+        display: block;
+        height: 8px;
+        background-color: var(--ocean-teal); /* green strip */
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+}
+
 h1 {
     color: white;
     font-size: 2rem;
@@ -46,13 +65,14 @@ h1 {
 }
 
 /* CARDS (MOBILE = STACKED) */
-.card {
-    position: absolute;
-    width: 320px;
-    background-color: transparent; /* teal background */
-    border-radius: 6px;
+/* 🔥 MOBILE DATA FIX */
+@media screen and (max-width: 767px) {
+    .data {
+        position: static; /* remove absolute */
+        width: 90%;
+        margin: 2rem auto;
+    }
 }
-
 /* HEADER BAR (IMPORTANT) */
 .card h2 {
     position: relative;
@@ -78,6 +98,35 @@ h1 {
     padding-left: 0;    /* removes left indent */
     margin: 0;
     min-height: 340px;
+}
+
+@media screen and (max-width: 767px) {
+    .data-list {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 1.5rem;
+        padding-top: 1rem; /* 🔥 remove large top space */
+        border-radius: 0; /* flat like wireframe */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .data-list li {
+        text-align: center;
+        margin-left: 0 !important; /* 🔥 remove uneven effect on mobile */
+        margin-bottom: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .data h2 {
+        position: static;
+        transform: none;
+        margin: 0;
+        padding: 0.8rem;
+        text-align: center;
+        background-color: transparent; /* 🔥 no green box */
+        color: black;
+    }
 }
 
 .weather-data {
@@ -131,4 +180,16 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+/* 🔥 MOBILE FOOTER FIX */
+@media screen and (max-width: 767px) {
+    footer {
+        padding: 0.6rem; /* 🔥 reduce height */
+        font-size: 0.8rem; /* smaller text */
+    }
+
+    footer p {
+        margin: 0.2rem 0; /* tighten spacing between lines */
+    }
 }
