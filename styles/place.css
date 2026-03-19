@@ -169,6 +169,8 @@ h1 {
 
     .weather-data {
         padding-top: 1rem;  /* 🔥 remove that big space */
+        border: none !important;
+        box-shadow: none !important;
     }
 
 }
