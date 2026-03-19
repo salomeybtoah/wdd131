@@ -176,6 +176,12 @@ h1 {
     min-height: 220px;
 }
 
+.weather-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
 /* CONTENT INSIDE CARD */
 .data-list,
 .weather-data {
@@ -183,6 +189,16 @@ h1 {
     padding: 2rem;
     padding-top: 6rem; /* creates space for header */
     border-radius: 4px;
+}
+
+/* 🔥 FORCE WHITE BACKGROUND FOR DATA + WEATHER (MOBILE) */
+@media screen and (max-width: 767px) {
+    .data,
+    .weather {
+        background-color: white;
+        margin: 0;              /* remove gaps */
+        border-radius: 0;       /* flat like wireframe */
+    }
 }
 
 /* ROW ITEMS */
@@ -200,6 +216,13 @@ h1 {
     .weather-data p {
         text-align: center;
         margin-left: 0 !important; /* remove uneven desktop effect */
+    }
+}
+
+/* 🔥 LINE BETWEEN DATA & WEATHER */
+@media screen and (max-width: 767px) {
+    .weather {
+        border-top: 1px solid #ccc; /* thin grey line */
     }
 }
 
