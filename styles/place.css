@@ -71,6 +71,13 @@ h1 {
     display: block;
 }
 
+/* 🔥 IMAGE BOTTOM LINE (MOBILE ONLY) */
+@media screen and (max-width: 767px) {
+    .hero {
+        border-bottom: 8px solid var(--navy); /* same as header */
+    }
+}
+
 /* CARDS (MOBILE = STACKED) */
 /* 🔥 MOBILE DATA FIX */
 @media screen and (max-width: 767px) {
@@ -173,6 +180,14 @@ h1 {
     margin-bottom: 0.4rem;
     font-size: 0.85rem;
     color: black;
+}
+
+/* 🔥 CENTER WEATHER TEXT (MOBILE) */
+@media screen and (max-width: 767px) {
+    .weather-data p {
+        text-align: center;
+        margin-left: 0 !important; /* remove uneven desktop effect */
+    }
 }
 
 /* 🔥 UNEVEN TEXT - DATA */
