@@ -42,6 +42,13 @@ header {
         background-color: var(--ocean-teal); /* green strip */
     }
 
+    /* 🔥 REMOVE HEADER LINE ON MOBILE */
+@media screen and (max-width: 767px) {
+    header::after {
+        display: none;
+    }
+}
+
     h1 {
         font-size: 1.4rem;
     }
@@ -126,6 +133,22 @@ h1 {
         text-align: center;
         background-color: transparent; /* 🔥 no green box */
         color: black;
+    }
+}
+
+/* 🔥 CLEAN WEATHER (MOBILE) */
+@media screen and (max-width: 767px) {
+    .weather {
+        background-color: transparent; /* remove teal */
+    }
+
+    .weather h2 {
+        background-color: transparent; /* remove green header bar */
+        color: black;
+    }
+
+    .weather-data {
+        background-color: rgba(255, 255, 255, 0.9); /* match data */
     }
 }
 
