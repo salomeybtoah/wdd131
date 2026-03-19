@@ -71,10 +71,11 @@ h1 {
     display: block;
 }
 
-/* 🔥 IMAGE BOTTOM LINE (MOBILE ONLY) */
+/* 🔥 IMAGE LINE FIX (MOBILE) */
 @media screen and (max-width: 767px) {
-    .hero {
-        border-bottom: 8px solid var(--navy); /* same as header */
+    .hero img {
+        display: block;
+        border-bottom: 8px solid var(--navy); /* 🔥 FORCE LINE */
     }
 }
 
@@ -156,6 +157,18 @@ h1 {
 
     .weather-data {
         background-color: rgba(255, 255, 255, 0.9); /* match data */
+    }
+}
+
+/* 🔥 CENTER WEATHER HEADER (MOBILE) */
+@media screen and (max-width: 767px) {
+    .weather h2 {
+        text-align: center;
+        margin: 0 auto;
+        left: 0;              /* 🔥 cancel left shift */
+        top: 0;               /* 🔥 cancel push */
+        transform: none;      /* 🔥 stop floating */
+        position: static;     /* 🔥 reset completely */
     }
 }
 
