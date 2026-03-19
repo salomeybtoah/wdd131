@@ -79,6 +79,12 @@ h1 {
     }
 }
 
+@media screen and (max-width: 767px) {
+    main {
+        background-color: white;
+    }
+}
+
 /* CARDS (MOBILE = STACKED) */
 /* 🔥 MOBILE DATA FIX */
 @media screen and (max-width: 767px) {
@@ -158,6 +164,13 @@ h1 {
     .weather-data {
         background-color: rgba(255, 255, 255, 0.9); /* match data */
     }
+
+    @media screen and (max-width: 767px) {
+    .weather {
+        width: 100%;
+        margin: 0;
+    }
+}
 }
 
 /* 🔥 CENTER WEATHER HEADER (MOBILE) */
