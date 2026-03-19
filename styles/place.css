@@ -42,6 +42,13 @@ header {
         background-color: var(--ocean-teal); /* green strip */
     }
 
+    /* 🔥 REMOVE HEADER LINE ON MOBILE */
+@media screen and (max-width: 767px) {
+    header::after {
+        display: none;
+    }
+}
+
     h1 {
         font-size: 1.4rem;
     }
@@ -77,7 +84,7 @@ h1 {
 @media screen and (max-width: 767px) {
     .data {
         position: static; /* remove absolute */
-        width: 90%;
+        width: 100%;
         margin: 2rem auto;
     }
 }
