@@ -40,6 +40,10 @@
         margin-left: 5px;
     }
 
+    .weather-icon {
+    display: none;
+}
+
     /* STRONGER TITLE */
     h1 {
         font-size: 2.5rem;
