@@ -92,6 +92,7 @@ h1 {
         position: static; /* remove absolute */
         width: 100%;
         margin: 2rem auto;
+        border-bottom: 1px solid #ccc;
     }
 }
 /* HEADER BAR (IMPORTANT) */
@@ -243,13 +244,6 @@ h1 {
     .weather-data p {
         text-align: center;
         margin-left: 0 !important; /* remove uneven desktop effect */
-    }
-}
-
-/* 🔥 LINE BETWEEN DATA & WEATHER */
-@media screen and (max-width: 767px) {
-    .weather {
-        border-top: 1px solid #ccc; /* thin grey line */
     }
 }
 
