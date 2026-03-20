@@ -168,7 +168,7 @@ h1 {
 
     .weather-data {
          background-color: rgba(255, 255, 255, 0.9); /* match data */
-        padding-top: 1rem;  /* 🔥 remove that big space */
+        
         border: none !important;
         box-shadow: none !important;
     }
@@ -206,9 +206,8 @@ h1 {
         width: 15px;   /* smaller like wireframe */
         height: 15px;
         margin-left: 6px;
-        max-width: 100%;
+        object-fit: contain;
         vertical-align: middle;
-        color: var(--ocean-teal); /* 🔥 same as desktop */
     }
 }
 
