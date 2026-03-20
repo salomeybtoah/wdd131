@@ -206,6 +206,7 @@ h1 {
         width: 25px;   /* smaller like wireframe */
         height: 25px;
         margin-left: 6px;
+        max-width: 100%;
         vertical-align: middle;
         color: var(--ocean-teal); /* 🔥 same as desktop */
     }
