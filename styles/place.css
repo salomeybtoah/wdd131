@@ -32,7 +32,8 @@ header {
 @media screen and (max-width: 767px) {
     header {
         padding: 0.8rem; /* smaller like wireframe */
-        border-bottom: none; /* remove big beige line */
+    
+        border-bottom: 8px solid var(--sand-beige);
     }
 
     header::after {
@@ -162,13 +163,11 @@ h1 {
         color: black;
     }
 
-    .weather-data {
-        background-color: rgba(255, 255, 255, 0.9); /* match data */
-    }
 
     @media screen and (max-width: 767px) {
 
     .weather-data {
+         background-color: rgba(255, 255, 255, 0.9); /* match data */
         padding-top: 1rem;  /* 🔥 remove that big space */
         border: none !important;
         box-shadow: none !important;
