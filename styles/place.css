@@ -203,8 +203,8 @@ h1 {
 @media screen and (max-width: 767px) {
     .weather-icon {
         display: inline-block;
-        width: 32px;   /* smaller like wireframe */
-        height: 32px;
+        width: 30px;   /* smaller like wireframe */
+        height: 30px;
         margin-left: 6px;
         vertical-align: middle;
         color: var(--ocean-teal); /* 🔥 same as desktop */
