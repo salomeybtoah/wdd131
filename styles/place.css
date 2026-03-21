@@ -34,13 +34,12 @@ header {
 @media screen and (max-width: 767px) {
     header {
         padding: 0.8rem; /* smaller like wireframe */
-    
         border-bottom: 8px solid var(--sand-beige);
     }
 
     header::after {
         content: "";
-        display: block;
+        display: none;
         height: 8px;
         background-color: var(--ocean-teal); /* green strip */
     }
