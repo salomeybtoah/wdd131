@@ -8,6 +8,7 @@
     --white: #ffffff;
     --light-white: rgba(255, 255, 255, 0.9);
     --soft-white: rgba(255, 255, 255, 0.7);
+    --border-light: #cccccc;
 }
 
 * {
@@ -87,7 +88,7 @@ h1 {
         position: static; /* remove absolute */
         width: 100%;
         margin: 2rem auto;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid var(--border-light);
     }
 }
 /* HEADER BAR (IMPORTANT) */
@@ -218,7 +219,6 @@ h1 {
     margin-bottom: 0.4rem;
     font-size: 1.05rem;  /* 🔥 bigger and cleaner */
     line-height: 1.6;    /* 🔥 adds breathing space */
-    color: black;
 }
 
 /* 🔥 CENTER WEATHER TEXT (MOBILE) */
