@@ -6,6 +6,8 @@
     --navy: #004D40;
     --text-dark: #333333;
     --white: #ffffff;
+    --light-white: rgba(255, 255, 255, 0.9);
+    --soft-white: rgba(255, 255, 255, 0.7);
 }
 
 * {
@@ -17,7 +19,6 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--sand-beige);
-    color: var(--text-dark);
 }
 
 /* HEADER */
@@ -42,13 +43,6 @@ header {
         height: 8px;
         background-color: var(--ocean-teal); /* green strip */
     }
-
-    /* 🔥 REMOVE HEADER LINE ON MOBILE */
-@media screen and (max-width: 767px) {
-    header::after {
-        display: none;
-    }
-}
 
     h1 {
         font-size: 1.4rem;
@@ -125,7 +119,7 @@ h1 {
 
 @media screen and (max-width: 767px) {
     .data-list {
-        background-color: rgba(255, 255, 255, 0.9);
+        
         padding: 1.5rem;
         padding-top: 1rem; /* 🔥 remove large top space */
         border-radius: 0; /* flat like wireframe */
@@ -155,32 +149,20 @@ h1 {
 /* 🔥 CLEAN WEATHER (MOBILE) */
 @media screen and (max-width: 767px) {
     .weather {
-        background-color: transparent; /* remove teal */
-    }
-
-    .weather h2 {
-        background-color: transparent; /* remove green header bar */
-        color: black;
-    }
-
-
-    @media screen and (max-width: 767px) {
-
-    .weather-data {
-         background-color: rgba(255, 255, 255, 0.9); /* match data */
-        
-        border: none !important;
-        box-shadow: none !important;
-    }
-
-}
-
-    @media screen and (max-width: 767px) {
-    .weather {
+        background-color: transparent;
         width: 100%;
         margin: 0;
     }
-}
+
+    .weather h2 {
+        background-color: transparent;
+        color: black;
+    }
+
+    .weather-data {
+        border: none;
+        box-shadow: none;
+    }
 }
 
 /* 🔥 CENTER WEATHER HEADER (MOBILE) */
@@ -232,7 +214,7 @@ h1 {
 .data-list li,
 .weather-data p {
     background-color: transparent; /* ✅ no color */
-    color: var(--navy); /* deep teal text */
+    color: var(--text-dark); /* ✅ clean + consistent */
     margin-bottom: 0.4rem;
     font-size: 1.05rem;  /* 🔥 bigger and cleaner */
     line-height: 1.6;    /* 🔥 adds breathing space */
