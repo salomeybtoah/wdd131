@@ -38,6 +38,7 @@
     .weather h2::after {
         content: "⛅ ";
         margin-left: 5px;
+        color: #ffffff;
     }
 
     .weather-icon {
