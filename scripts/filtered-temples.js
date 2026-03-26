@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // =========================
-    // HAMBURGER MENU (KEEP)
+    // HAMBURGER MENU
     // =========================
     const header = document.querySelector('header');
     const nav = document.querySelector('nav');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // =========================
-    // TEMPLE ARRAY
+    // TEMPLE ARRAY (12 temples)
     // =========================
     const temples = [
         {
@@ -86,44 +86,43 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "Accra, Ghana",
             dedicated: "2004, January, 11",
             area: 17500,
-          imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
+            imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
         },
         {
             templeName: "Salt Lake Temple",
             location: "Salt Lake City, Utah",
             dedicated: "1893, April, 6",
             area: 253000,
-          imageUrl: "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/saltlake/Salt_Lake_Temple_63061dd9-0544-45ce-8a0d-9261abf81c42.png"
+            imageUrl: "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/saltlake/Salt_Lake_Temple_63061dd9-0544-45ce-8a0d-9261abf81c42.png"
         },
         {
             templeName: "Paris France Temple",
             location: "Paris, France",
             dedicated: "2017, May, 21",
             area: 44000,
-           imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-2056-main.jpg"
+            imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-2056-main.jpg"
         },
-       {
-    templeName: "Hong Kong China Temple",
-    location: "Hong Kong, China",
-    dedicated: "1996, May, 26",
-    area: 21000,
-    imageUrl: "https://newsroom.churchofjesuschrist.org/media/960x1280/CWD_37462AA1-9BFB-3FD4-E053-CB02630A3B9A.jpg"
-},
-{
-    templeName: "London England Temple",
-    location: "London, England",
-    dedicated: "1958, September, 7",
-    area: 42652,
-    imageUrl: "https://newsroom.churchofjesuschrist.org/media/orig/London-England-Temple1a.jpg"
-}
-
+        {
+            templeName: "Hong Kong China Temple",
+            location: "Hong Kong, China",
+            dedicated: "1996, May, 26",
+            area: 21000,
+            imageUrl: "https://newsroom.churchofjesuschrist.org/media/960x1280/CWD_37462AA1-9BFB-3FD4-E053-CB02630A3B9A.jpg"
+        },
+        {
+            templeName: "London England Temple",
+            location: "London, England",
+            dedicated: "1958, September, 7",
+            area: 42652,
+            imageUrl: "https://newsroom.churchofjesuschrist.org/media/orig/London-England-Temple1a.jpg"
+        }
     ];
 
 
     // =========================
     // DISPLAY FUNCTION
     // =========================
-    const container = document.querySelector('.cards'); // ✅ FIXED
+    const container = document.querySelector('.cards');
 
     function displayTemples(templeList) {
         container.innerHTML = "";
@@ -134,7 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('card');
 
             card.innerHTML = `
-                <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+                <img src="${temple.imageUrl}" 
+                     alt="${temple.templeName}" 
+                     loading="lazy"
+                     onerror="this.src='https://via.placeholder.com/400x250?text=Image+Not+Available'">
+
                 <h3>${temple.templeName}</h3>
                 <p><strong>Location:</strong> ${temple.location}</p>
                 <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
@@ -175,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // =========================
-    // NAV EVENTS (IMPORTANT FIX)
+    // NAV EVENTS
     // =========================
     document.getElementById('home').addEventListener('click', (e) => {
         e.preventDefault();
@@ -209,22 +212,3 @@ document.addEventListener('DOMContentLoaded', () => {
     showAll();
 
 });
-
-function displayTemples(templeList) {
-    container.innerHTML = "";
-    
-    templeList.forEach(temple => {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        
-        card.innerHTML = `
-            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=Image+Not+Available'">
-            <h3>${temple.templeName}</h3>
-            <p><strong>Location:</strong> ${temple.location}</p>
-            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-            <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-        `;
-        
-        container.appendChild(card);
-    });
-}
