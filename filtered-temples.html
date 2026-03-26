@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album | WDD131</title>
+    <meta name="description" content="Temple Album for WDD131 - Collection of temple images">
+    <meta name="author" content="Salomey Bempomaa Toah">
+    
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Optimized Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    </noscript>
+    
+  <!-- Critical mobile CSS -->
+<link rel="stylesheet" href="styles/filtered-temples.css">
+
+<!-- Desktop CSS -->
+<link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 768px)">
+    
+    <!-- Deferred JavaScript -->
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+    <ul>
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="old">Old</a></li>
+        <li><a href="#" id="new">New</a></li>
+        <li><a href="#" id="large">Large</a></li>
+        <li><a href="#" id="small">Small</a></li>
+    </ul>
+</nav>
+    </header>
+    
+    <main>
+        <h2>Temple Gallery</h2>
+
+    <!-- DYNAMIC CARDS GO HERE -->
+    <div class="cards"></div>
+    </main>
+    
+    <footer>
+         <p>&copy; <span id="currentyear"></span> | 🕍Salomey Bempomaa Toah🕍</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

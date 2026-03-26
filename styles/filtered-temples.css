@@ -1,0 +1,243 @@
+/* temples.css - Mobile-first base styles with Deep Teal Theme */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #2d3e50;
+    background-color: #f0f7f7;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #006d77;
+}
+
+/* Header styles - Deep teal background */
+header {
+    background-color: #003333;  /* Deep teal */
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 51, 51, 0.3);
+}
+
+header h1 {
+    color: white;  /* White text for Temple Album */
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Make sure ALL text in header is white */
+header,
+header h1,
+header nav,
+header nav ul,
+header nav li,
+header nav a,
+header #hamburger-btn,
+header p,
+header span {
+    color: white;
+}
+
+/* Navigation - Flex column for mobile */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: white;  /* White text for nav links */
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    display: block;
+    text-align: center;
+    background-color: #004d4d;  /* Slightly lighter deep teal for contrast */
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect - lighter teal but keeping white text */
+nav a:hover {
+    background-color: #006666;  /* Lighter teal on hover */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 51, 51, 0.4);
+}
+
+nav button {
+    color: white;
+    background: none;
+    border: none;
+
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* UNDERLINE HOVER EFFECT */
+nav button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #99c2c2;
+    transition: width 0.3s;
+    margin: auto;
+}
+
+nav button:hover::after {
+    width: 70%;
+}
+
+/* Hamburger button */
+#hamburger-btn {
+    display: none;
+    background: #004d4d;  /* Match nav link color */
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin: 0 auto 1rem auto;
+    width: fit-content;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#hamburger-btn:hover {
+    background-color: #006666;
+    transform: scale(1.05);
+}
+
+/* Main content */
+main {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #003333;
+}
+
+main h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #003333;  /* Match header deep teal */
+}
+
+img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block; 
+}
+
+/* Mobile navigation - hidden by default, shown when 'show' class is added */
+@media screen and (max-width: 767px) {
+    nav ul {
+        display: none;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+}
+
+/* ===== TEMPLE CARDS (NEW SYSTEM) ===== */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* INDIVIDUAL CARD */
+.card {
+    background-color:#e0e0e0;
+    border-radius: 0px;
+    padding: 1rem;
+
+    box-shadow:  0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+    /* 🔥 THIS is the pop-out shadow */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+
+    /* make sure no rounded corners */
+    border-radius: 0;
+
+    /* little spacing so shadow shows nicely */
+    margin-top: 1rem;
+}
+
+/* TITLE */
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #003333;
+}
+
+/* TEXT */
+.card p {
+    font-size: 0.95rem;
+    margin: 0.3rem 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #003333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 4px solid #004d4d;
+}
+
+footer p {
+    margin: 0.3rem 0;
+    color: white;
+}
+
+#lastModified {
+    color: white;  /* Changed from #99c2c2 to white */
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0.9;  /* Optional: gives a slight visual distinction */
+}
