@@ -125,28 +125,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.cards');
 
     function displayTemples(templeList) {
-        container.innerHTML = "";
+    container.innerHTML = "";
 
-        templeList.forEach(temple => {
+    templeList.forEach((temple, index) => {   // ✅ IMPORTANT: index added
 
-            const card = document.createElement('div');
-            card.classList.add('card');
+        const card = document.createElement('div');
+        card.classList.add('card');
 
-            card.innerHTML = `
-                <img src="${temple.imageUrl}" 
-                     alt="${temple.templeName}" 
-                     loading="lazy"
-                     onerror="this.src='https://via.placeholder.com/400x250?text=Image+Not+Available'">
+        const img = document.createElement('img');
+        img.src = temple.imageUrl;
+        img.alt = temple.templeName;
 
-                <h3>${temple.templeName}</h3>
-                <p><strong>Location:</strong> ${temple.location}</p>
-                <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-                <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-            `;
+        // ✅ THIS is the safe fix (no template issues)
+        if (index === 0) {
+            img.setAttribute('fetchpriority', 'high');
+        } else {
+            img.setAttribute('loading', 'lazy');
+        }
 
-            container.appendChild(card);
-        });
-    }
+        img.onerror = () => {
+            img.src = 'https://via.placeholder.com/400x250?text=Image+Not+Available';
+        };
+
+        const title = document.createElement('h3');
+        title.textContent = temple.templeName;
+
+        const location = document.createElement('p');
+        location.innerHTML = `<strong>Location:</strong> ${temple.location}`;
+
+        const dedicated = document.createElement('p');
+        dedicated.innerHTML = `<strong>Dedicated:</strong> ${temple.dedicated}`;
+
+        const area = document.createElement('p');
+        area.innerHTML = `<strong>Area:</strong> ${temple.area.toLocaleString()} sq ft`;
+
+        card.appendChild(img);
+        card.appendChild(title);
+        card.appendChild(location);
+        card.appendChild(dedicated);
+        card.appendChild(area);
+
+        container.appendChild(card);
+    });
+}
 
 
     // =========================

@@ -179,6 +179,7 @@ img {
     background-color:#e0e0e0;
     border-radius: 0px;
     padding: 1rem;
+    min-height: 350px;
 
     box-shadow:  0 2px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -193,7 +194,7 @@ img {
 /* IMAGE */
 .card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
 
     /* 🔥 THIS is the pop-out shadow */
@@ -228,6 +229,7 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
     border-top: 4px solid #004d4d;
+    min-height: 80px;
 }
 
 footer p {
