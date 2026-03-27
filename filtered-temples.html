@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album | WDD131</title>
-    <meta name="description" content="Temple Album for WDD131 - Collection of temple images">
+    <title>Temple Album | Filtered Temple Collection</title>
+    <meta name="description" content="Explore LDS temples worldwide with interactive filtering. View temple details including location, dedication date, and area.">
     <meta name="author" content="Salomey Bempomaa Toah">
     
-    <!-- Preconnect (FIXED) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- Image sources -->
-<link rel="preconnect" href="https://content.churchofjesuschrist.org">
-
-<!-- Optional -->
-<link rel="preconnect" href="https://churchofjesuschristtemples.org">
-<link rel="preconnect" href="https://newsroom.churchofjesuschrist.org">
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Preconnect for Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://content.churchofjesuschrist.org" crossorigin>
+    <link rel="dns-prefetch" href="https://churchofjesuschristtemples.org">
+    <link rel="dns-prefetch" href="https://newsroom.churchofjesuschrist.org">
+    
+    <!-- Optimized Font Loading (async, non-blocking) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" media="print" onload="this.media='all'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap">
     </noscript>
     
-  <!-- Critical mobile CSS -->
-<link rel="stylesheet" href="styles/filtered-temples.css">
-
-<!-- Desktop CSS -->
-<link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 768px)">
+    <!-- CSS with media optimization -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 768px)">
+    
+    <!-- Preload critical image (first temple image) -->
+    <link rel="preload" as="image" href="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg" fetchpriority="high">
     
     <!-- Deferred JavaScript -->
     <script src="scripts/filtered-temples.js" defer></script>
