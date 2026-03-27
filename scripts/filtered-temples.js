@@ -102,13 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
             imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-2056-main.jpg"
         },
         {
-            templeName: "Hong Kong China Temple",
-            location: "Hong Kong, China",
-            dedicated: "1996, May, 26",
-            area: 21000,
-            imageUrl: "https://newsroom.churchofjesuschrist.org/media/960x1280/CWD_37462AA1-9BFB-3FD4-E053-CB02630A3B9A.jpg"
-        },
-        {
             templeName: "London England Temple",
             location: "London, England",
             dedicated: "1958, September, 7",
