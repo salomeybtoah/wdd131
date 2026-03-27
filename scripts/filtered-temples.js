@@ -315,3 +315,21 @@ document.addEventListener('DOMContentLoaded', () => {
         failedImages.clear();
     });
 });
+
+function handleNavClick(e, filterType) {
+    e.preventDefault();
+    e.stopPropagation();
+    debouncedDisplay(filterType);
+    
+    // Update active state in navigation - ADD NULL CHECK
+    const navLinks = document.querySelectorAll('nav ul li a');
+    if (navLinks && navLinks.length > 0) {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+    }
+    
+    if (e.currentTarget) {
+        e.currentTarget.classList.add('active');
+    }
+}
