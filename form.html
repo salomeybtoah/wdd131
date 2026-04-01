@@ -30,7 +30,7 @@
         <div class="form-group">
             <label for="product">Product Name</label>
 
-            <select id="product" name="product" required>
+            <select id="product" name="product" required autocomplete="off">
                 <option value="" disabled selected>Select a Product ...</option>
                 <!-- JS will populate options here -->
             </select>
@@ -70,7 +70,7 @@
         <!-- DATE -->
         <div class="form-group">
             <label for="installDate">Date of Installation</label>
-            <input type="date" id="installDate" name="installDate" required>
+            <input type="date" id="installDate" name="installDate" required autocomplete="name">
         </div>
 
         <!-- FEATURES -->
@@ -101,13 +101,13 @@
         <!-- REVIEW -->
         <div class="form-group">
             <label for="review">Written Review <span class="optional">(optional)</span></label>
-            <textarea id="review" name="review" rows="4"></textarea>
+            <textarea id="review" name="review" rows="4" autocomplete="off"></textarea>
         </div>
 
         <!-- NAME -->
         <div class="form-group">
             <label for="username">Your Name <span class="optional">(optional)</span></label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" autocomplete="name">
         </div>
 
         <!-- SUBMIT -->
