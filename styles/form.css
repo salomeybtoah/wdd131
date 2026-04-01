@@ -1,0 +1,125 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COLORS */
+:root {
+    --plum: #5a2a5a;      /* dominant (header, footer, buttons) */
+    --forest: #2e7d32;    /* accent (hover, highlights) */
+    --light: #f5f0f5;     /* soft background */
+    --card: #e8dce8;      /* form background (matches screenshot feel) */
+    --white: #ffffff;
+}
+
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light);
+    color: #222;
+}
+
+/* HEADER */
+header {
+    background-color: var(--plum);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* MAIN */
+main {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* FORM CONTAINER */
+form {
+    background-color: var(--card);
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* FORM GROUP */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group p {
+    color: var(--forest);
+}
+
+.optional {
+    color: var(--forest);
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+/* LABELS */
+label, p {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: #222;
+}
+
+/* INPUTS */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* TEXTAREA */
+textarea {
+    resize: vertical;
+}
+
+/* RADIO + CHECKBOX */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+/* STAR ALIGNMENT */
+.form-group label input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* BUTTON */
+input[type="submit"] {
+    background-color: var(--plum);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color:var(--forest);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--plum);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer,
+footer p,
+footer a,
+footer span {
+    color: white !important;
+}
