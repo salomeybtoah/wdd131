@@ -122,3 +122,23 @@ footer a,
 footer span {
     color: white !important;
 }
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    main {
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    
+    form {
+        padding: 1rem;
+    }
+    
+    .form-group label {
+        font-size: 0.95rem;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+    }
+}
