@@ -6,20 +6,18 @@
 
 /* COLORS */
 :root {
-    --plum: #5a2a5a;
-    --forest: #2e7d32;
-    --light: #f5f0f5;
-    --card: #e8dce8;
+    --plum: #5a2a5a;      /* dominant (header, footer, buttons) */
+    --forest: #2e7d32;    /* accent (hover, highlights) */
+    --light: #f5f0f5;     /* soft background */
+    --card: #e8dce8;      /* form background (matches screenshot feel) */
     --white: #ffffff;
-    --dark-text: #1a1a1a;
-    --forest-dark: #1b5e20;
 }
 
 /* BODY */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--light);
-    color: var(--dark-text);
+    color: #222;
 }
 
 /* HEADER */
@@ -50,60 +48,22 @@ form {
     margin-bottom: 1.2rem;
 }
 
-/* Make the Overall Rating paragraph take full width and force stars to new line */
 .form-group p {
-    color: var(--dark-text);
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
-    width: 100%;
+    color: #1a3b1a;
 }
 
-/* Force all labels (star options) to display as block/inline-flex but on their own line */
-.form-group label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-weight: normal;
-    margin-right: 0.75rem;
-    color: var(--dark-text);
-}
-
-/* This ensures the Overall Rating text is separate from the stars */
-.form-group:has(p) {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-
-.form-group:has(p) p {
-    flex-basis: 100%;
-    margin-bottom: 0.5rem;
-}
-
-/* Optional text - FIXED for better contrast */
 .optional {
-    color: var(--forest-dark);
+    color: #1a3b1a;
     font-weight: normal;
-    font-size: 0.875rem;
-    font-style: italic;
+    font-size: 1rem;
 }
 
-/* LABELS for features and other fields */
-.form-group label {
+/* LABELS */
+label, p {
     display: block;
     font-weight: bold;
     margin-bottom: 0.4rem;
-    color: var(--dark-text);
-}
-
-/* Reset for labels that contain radio/checkbox inputs */
-.form-group label:has(input[type="radio"]),
-.form-group label:has(input[type="checkbox"]) {
-    display: inline-flex;
-    font-weight: normal;
-    margin-right: 0.75rem;
-    margin-bottom: 0;
+    color: #222;
 }
 
 /* INPUTS */
@@ -114,8 +74,6 @@ textarea {
     padding: 0.6rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: var(--white);
-    color: var(--dark-text);
 }
 
 /* TEXTAREA */
@@ -130,6 +88,11 @@ input[type="checkbox"] {
     margin-right: 6px;
 }
 
+/* STAR ALIGNMENT */
+.form-group label input[type="radio"] {
+    margin-right: 5px;
+}
+
 /* BUTTON */
 input[type="submit"] {
     background-color: var(--plum);
@@ -138,13 +101,10 @@ input[type="submit"] {
     padding: 0.8rem;
     font-size: 1rem;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    width: 100%;
 }
 
 input[type="submit"]:hover {
-    background-color: var(--forest);
+    background-color:var(--forest);
 }
 
 /* FOOTER */
@@ -161,18 +121,4 @@ footer p,
 footer a,
 footer span {
     color: white !important;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    main {
-        margin: 1rem;
-        padding: 0.5rem;
-    }
-    
-    .form-group label:has(input[type="radio"]),
-    .form-group label:has(input[type="checkbox"]) {
-        display: block;
-        margin-bottom: 0.5rem;
-    }
 }
