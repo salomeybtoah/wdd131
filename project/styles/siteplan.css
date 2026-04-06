@@ -576,35 +576,39 @@ footer a:hover {
 }
 
 /* MOBILE HERO TEXT FIX - Add this to your CSS file */
+/* MOBILE HERO FIX */
 @media (max-width: 767px) {
     .hero-text {
-        top: 25%;  /* Adjust position slightly */
-        padding: 12px;  /* Reduce padding */
-        max-width: 90%;  /* Slightly wider */
+        top: 50% !important;  /* Keep centered vertically */
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;  /* Perfect centering */
+        padding: 10px 12px;
+        width: 85%;
+        max-width: 85%;
     }
 
     .hero-text h2 {
-        font-size: 1.8rem !important;  /* Smaller heading on mobile */
+        font-size: 1.3rem !important;
         margin-bottom: 0.3rem;
     }
 
     .hero-text p {
-        font-size: 0.9rem !important;  /* Smaller paragraph on mobile */
+        font-size: 0.8rem !important;
     }
 }
 
-/* Even smaller screens (phones under 480px) */
+/* Extra small phones */
 @media (max-width: 480px) {
+    .hero-text {
+        width: 90%;
+        padding: 8px 10px;
+    }
+
     .hero-text h2 {
-        font-size: 1.4rem !important;
+        font-size: 1.1rem !important;
     }
 
     .hero-text p {
-        font-size: 0.75rem !important;
-    }
-
-    .hero-text {
-        padding: 8px;
-        top: 20%;
+        font-size: 0.65rem !important;
     }
 }
