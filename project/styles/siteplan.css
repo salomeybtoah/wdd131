@@ -579,38 +579,39 @@ footer a:hover {
 /* MOBILE HERO FIX */
 @media (max-width: 767px) {
     .hero-text {
-    top: 25% !important;  /* CHANGE: from 50% to 35% - moves it higher */
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    padding: 4px 10px;  /* CHANGE: from 10px 12px to 6px 12px - smaller background */
-    width: auto;  /* CHANGE: from 85% to auto - background fits text */
-    max-width: 85%;
-    min-width: 180px;  /* ADD THIS - keeps it from getting too narrow */
-}
+        top: 25% !important;   /* 🔥 moved higher */
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        background: rgba(255, 255, 255, 0.75); /* 🔥 stronger overlay */
+
+        padding: 6px 12px;     /* 🔥 tighter wrap */
+        width: fit-content;    /* 🔥 wraps content nicely */
+        max-width: 90%;
+    }
 
     .hero-text h2 {
-        font-size: 2.5rem !important;
-        margin-bottom: 0.1rem;
+        font-size: 1.8rem !important;   /* 🔥 bigger */
+        margin-bottom: 0.2rem;
     }
 
     .hero-text p {
-        font-size: 1.3rem !important;
-        margin-bottom: 0 !important;
+        font-size: 1rem !important;     /* 🔥 bigger */
+        margin-bottom: 0;
     }
 }
 
 /* Extra small phones */
 @media (max-width: 480px) {
     .hero-text {
-        width: 90%;
-        padding: 8px 10px;
+        top: 22%;              /* 🔥 slightly higher again */
+        padding: 5px 10px;     /* 🔥 snug fit */
     }
 
     .hero-text h2 {
-        font-size: 1.1rem !important;
+        font-size: 1.4rem !important;   /* 🔥 not too small anymore */
     }
 
     .hero-text p {
-        font-size: 0.65rem !important;
+        font-size: 0.9rem !important;
     }
 }
