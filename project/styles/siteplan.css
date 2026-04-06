@@ -579,7 +579,7 @@ footer a:hover {
 /* MOBILE HERO FIX */
 @media (max-width: 767px) {
     .hero-text {
-    top: 30% !important;  /* CHANGE: from 50% to 35% - moves it higher */
+    top: 25% !important;  /* CHANGE: from 50% to 35% - moves it higher */
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     padding: 4px 10px;  /* CHANGE: from 10px 12px to 6px 12px - smaller background */
@@ -589,12 +589,12 @@ footer a:hover {
 }
 
     .hero-text h2 {
-        font-size: 2rem !important;
+        font-size: 2.5rem !important;
         margin-bottom: 0.1rem;
     }
 
     .hero-text p {
-        font-size: 1rem !important;
+        font-size: 1.3rem !important;
         margin-bottom: 0 !important;
     }
 }
