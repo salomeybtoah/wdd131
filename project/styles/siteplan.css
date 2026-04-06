@@ -74,6 +74,8 @@ main {
     padding: 1.5rem;
      flex: 1;   /* 🔥 pushes footer to bottom */
      text-align: center;
+     max-width: 1500px;
+    margin: 0 auto;
 }
 
 main h2 {
@@ -225,9 +227,11 @@ main h2 {
 /* DESTINATIONS */
 .destination {
     background-color: var(--white);
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border-radius: 6px;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .destination img {
@@ -249,6 +253,7 @@ main h2 {
 
     margin: 1rem 0;      /* 🔥 REMOVE auto */
    width: fit-content;    /* 🔥 no centering */
+   margin-bottom: 1rem;
 }
 
 /* DATA & WEATHER */
@@ -257,15 +262,14 @@ main h2 {
 
 .data,
 .weather {
-    background-color: var(--light-white);   /* ✅ visible background */
-    padding: 1.5rem;                  /* ✅ breathing space */
-    margin: 1rem 0;                /* ✅ space between sections */
+    background-color: #f9fafb;
+    padding: 1.2rem;
+    border-radius: 8px;
 
-    border-radius: 10px;
     border: 1px solid #e5e7eb;
 
     text-align: left;
-     box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 🔥 subtle lift */
+        margin-top: 1rem;   /* 🔥 adds space from image */
 }
 
 /* HEADINGS */
@@ -297,7 +301,7 @@ main h2 {
 .weather p {
     font-size: 1rem;          /* 🔥 FIX SMALL TEXT */
     margin-bottom: 0.8rem;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 /* ADD SPACE BETWEEN LABEL & VALUE */
@@ -319,12 +323,20 @@ main h2 {
 }
 
 /* TITLE */
-.form-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+.form-section {
+    max-width: 1000px;   /* 🔥 wider form */
+    margin: 3rem auto;
+    padding: 2.5rem;
+    text-align: left;
 
-    font-size: 1.8rem;
-    color: var(--primary);
+    background-color: var(--white);
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-section h2 {
+    color: var(--primary);   /* 🔥 teal again */
 }
 
 /* FORM LAYOUT */
@@ -349,12 +361,13 @@ label {
 /* INPUTS */
 input,
 select {
-    padding: 0.7rem;
+    padding: 0.9rem;
 
     border: 1px solid #ccc;
     border-radius: 6px;
 
     font-size: 1rem;
+    width: 100%;
 }
 
 /* FOCUS EFFECT */
