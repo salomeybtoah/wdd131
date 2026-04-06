@@ -35,12 +35,12 @@
 
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your full name" required>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
             </div>
 
             <div class="form-group">
                 <label for="destination">Select Destination</label>
-                <select id="destination" required>
+                <select id="destination" name="destination" required>
                     <option value="">-- Choose Destination --</option>
                     <option value="Maldives">Maldives</option>
                     <option value="Kenya">Kenya</option>
@@ -50,12 +50,12 @@
 
             <div class="form-group">
                 <label for="date">Travel Date</label>
-                <input type="date" id="date" required>
+                <input type="date" id="date" name="date" required>
             </div>
 
             <div class="form-group">
                 <label for="people">Number of People</label>
-                <input type="number" id="people" min="1" required>
+                <input type="number" id="people" name="people" min="1" required>
             </div>
 
             <button type="submit">Plan Trip</button>
