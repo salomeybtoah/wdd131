@@ -583,9 +583,10 @@ footer a:hover {
         left: 50%;
         transform: translate(-50%, -50%);
 
-        padding: 15px;   /* 🔥 give it breathing space again */
+        padding: 12px 20px;   /* 🔥 give it breathing space again */
         max-width: 600px;  /* 🔥 like desktop */
-        width: 100%;     /* 🔥 remove squeezing */
+        width: auto;     /* 🔥 remove squeezing */
+        display: inline-block;  /* ADD THIS */
     }
 
     .hero-text h2 {
@@ -596,6 +597,7 @@ footer a:hover {
 
     .hero-text p {
         font-size: 1.2rem;   /* 🔥 readable and balanced */
+        white-space: nowrap;
     }
 }
 
@@ -605,15 +607,17 @@ footer a:hover {
         top: 28%;
         width: 90%;     /* tiny adjustment only */
         max-width: none;  /* allow a bit more width */
-        padding: 12px;
+        padding: 8px 15px;   /* 🔥 slightly smaller padding */
     }
 
     .hero-text h2 {
         font-size: 1.8rem;
+        white-space: nowrap;
     }
 
     .hero-text p {
         font-size: 1rem;
+        white-space: nowrap;
     }
 }
 
