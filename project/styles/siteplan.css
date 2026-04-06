@@ -574,3 +574,37 @@ footer a:hover {
         margin-top: 0;
     }
 }
+
+/* MOBILE HERO TEXT FIX - Add this to your CSS file */
+@media (max-width: 767px) {
+    .hero-text {
+        top: 25%;  /* Adjust position slightly */
+        padding: 12px;  /* Reduce padding */
+        max-width: 90%;  /* Slightly wider */
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem !important;  /* Smaller heading on mobile */
+        margin-bottom: 0.3rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem !important;  /* Smaller paragraph on mobile */
+    }
+}
+
+/* Even smaller screens (phones under 480px) */
+@media (max-width: 480px) {
+    .hero-text h2 {
+        font-size: 1.4rem !important;
+    }
+
+    .hero-text p {
+        font-size: 0.75rem !important;
+    }
+
+    .hero-text {
+        padding: 8px;
+        top: 20%;
+    }
+}
