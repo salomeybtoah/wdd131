@@ -584,8 +584,8 @@ footer a:hover {
         transform: translate(-50%, -50%);
 
         padding: 15px;   /* 🔥 give it breathing space again */
-        max-width: 80%;  /* 🔥 like desktop */
-        width: auto;     /* 🔥 remove squeezing */
+        max-width: 600px;  /* 🔥 like desktop */
+        width: 100%;     /* 🔥 remove squeezing */
     }
 
     .hero-text h2 {
@@ -601,8 +601,9 @@ footer a:hover {
 /* Extra small phones */
 @media (max-width: 480px) {
     .hero-text {
-        top: 28%;        /* tiny adjustment only */
-        max-width: 90%;  /* allow a bit more width */
+        top: 28%;
+        width: 90%;     /* tiny adjustment only */
+        max-width: none;  /* allow a bit more width */
         padding: 12px;
     }
 
