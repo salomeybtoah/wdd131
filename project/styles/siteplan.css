@@ -579,17 +579,18 @@ footer a:hover {
 /* MOBILE HERO FIX */
 @media (max-width: 767px) {
     .hero-text {
-        top: 30% !important;  /* 🔥 move down a bit on mobile */
-        left: 50% !important; /* 🔥 keep centered horizontally */
-        transform: translate(-50%, -50%) !important; /* 🔥 ensure it stays centered */
+        top: 32%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-        padding: 10px 6px;   /* smaller background */
+        padding: 8px 12px;        /* 🔥 smaller background */
 
-        width: auto !important;           /* slightly smaller box */
-        max-width: 200px !important;     /* 🔥 THIS is the key fix */
-        background: rgba(255, 255, 255, 0.6) !important;
+        width: fit-content;       /* 🔥 wraps tightly around text */
+        max-width: 90%;           /* 🔥 prevents overflow */
+
+        background: rgba(255, 255, 255, 0.5); /* 🔥 lighter + less heavy */
+        border-radius: 6px;
     }
-
     .hero-text h2 {
         font-size: 1.8rem;
         white-space: nowrap;  /* keeps title in one line */
