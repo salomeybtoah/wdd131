@@ -583,7 +583,7 @@ footer a:hover {
         left: 50%;
         transform: translate(-50%, -50%);
 
-        padding: 8px 12px;        /* 🔥 smaller background */
+        padding: 4px 12px 10px 12px;        /* 🔥 smaller background */
 
         width: fit-content;       /* 🔥 wraps tightly around text */
         max-width: 90%;           /* 🔥 prevents overflow */
