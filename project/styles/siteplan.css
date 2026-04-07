@@ -587,6 +587,7 @@ footer a:hover {
 
         width: 80%;           /* slightly smaller box */
         max-width: 300px;     /* 🔥 THIS is the key fix */
+        background-color: red !important; /* 🔥 TEMP RED TO SEE BOX */
     }
 
     .hero-text h2 {
