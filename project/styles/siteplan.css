@@ -583,7 +583,7 @@ footer a:hover {
         left: 50% !important; /* 🔥 keep centered horizontally */
         transform: translate(-50%, -50%) !important; /* 🔥 ensure it stays centered */
 
-        padding: 5px 8px;   /* smaller background */
+        padding: 10px 6px;   /* smaller background */
 
         width: auto !important;           /* slightly smaller box */
         max-width: 200px !important;     /* 🔥 THIS is the key fix */
@@ -594,6 +594,7 @@ footer a:hover {
         font-size: 1.8rem;
         white-space: nowrap;  /* keeps title in one line */
         margin-bottom: 0.4rem;
+        text-align: center;
     }
 
     .hero-text p {
