@@ -579,15 +579,15 @@ footer a:hover {
 /* MOBILE HERO FIX */
 @media (max-width: 767px) {
     .hero-text {
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 30% !important;  /* 🔥 move down a bit on mobile */
+        left: 50% !important; /* 🔥 keep centered horizontally */
+        transform: translate(-50%, -50%) !important; /* 🔥 ensure it stays centered */
 
         padding: 5px 8px;   /* smaller background */
 
-        width: 80%;           /* slightly smaller box */
-        max-width: 300px;     /* 🔥 THIS is the key fix */
-        background-color: red !important; /* 🔥 TEMP RED TO SEE BOX */
+        width: auto !important;           /* slightly smaller box */
+        max-width: 200px !important;     /* 🔥 THIS is the key fix */
+        background: rgba(255, 255, 255, 0.6) !important;
     }
 
     .hero-text h2 {
