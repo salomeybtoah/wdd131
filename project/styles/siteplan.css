@@ -578,18 +578,32 @@ footer a:hover {
 /* MOBILE HERO TEXT FIX - Add this to your CSS file */
 /* MOBILE HERO FIX */
 @media (max-width: 767px) {
+
+    .hero {
+        position: relative;
+    }
+
     .hero-text {
-        top: 40%;
+        position: absolute;
+
+        top: 38%;
         left: 50%;
         transform: translate(-50%, -50%);
 
-        padding: 0px 12px 10px 12px;        /* 🔥 smaller background */
+        display: inline-block;
 
-        width: fit-content;       /* 🔥 wraps tightly around text */
-        max-width: 90%;           /* 🔥 prevents overflow */
+        width: auto;
+        max-width: 80%;
 
-        background: rgba(255, 255, 255, 0.5); /* 🔥 lighter + less heavy */
+        padding-top: 2px;
+        padding-right: 12px;
+        padding-bottom: 8px;
+        padding-left: 12px;
+
+        background: rgba(255, 255, 255, 0.45);
         border-radius: 6px;
+
+        z-index: 2;
     }
     .hero-text h2 {
         font-size: 1.8rem;
