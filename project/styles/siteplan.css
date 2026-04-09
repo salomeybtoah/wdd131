@@ -579,7 +579,7 @@ footer a:hover {
 /* MOBILE HERO FIX */
 @media (max-width: 767px) {
     .hero-text {
-        top: 32%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
 
