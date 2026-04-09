@@ -609,9 +609,8 @@ footer a:hover {
     font-size: 2.2rem;
     text-align: center !important;
     display: block;
-    width: 100%;
-    margin: 0 auto 0.5rem auto;
-    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
 }
 
     .hero-text p {
@@ -663,6 +662,6 @@ footer a:hover {
     }
 
     .hero-text {
-        top: 45% !important;   /* now this will actually move lower */
+        top: 42% !important;   /* now this will actually move lower */
     }
 }
