@@ -605,12 +605,15 @@ footer a:hover {
 
         z-index: 2;
     }
+
     .hero-text h2 {
     font-size: 2.2rem;
     text-align: center !important;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin: 0 auto 0.5rem auto;
+    white-space: nowrap;
+    padding: 10px;
 }
 
     .hero-text p {
@@ -662,6 +665,6 @@ footer a:hover {
     }
 
     .hero-text {
-        top: 42% !important;   /* now this will actually move lower */
+        top: 40% !important;   /* now this will actually move lower */
     }
 }
