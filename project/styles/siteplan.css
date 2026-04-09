@@ -646,3 +646,22 @@ footer a:hover {
         padding: 0.5rem 1rem;
     }
 }
+
+/* MOBILE HERO IMAGE HEIGHT FIX */
+@media (max-width: 767px) {
+
+    .hero {
+        margin-top: 1rem;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 320px;         /* increase image height */
+        object-fit: cover;     /* keeps image neat */
+        display: block;
+    }
+
+    .hero-text {
+        top: 45% !important;   /* now this will actually move lower */
+    }
+}
