@@ -517,14 +517,15 @@ input::placeholder {
 
 /* LINKS */
 .ref-card a {
-    color: var(--primary);
+    color: #00332a;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 .ref-card a:hover {
     text-decoration: underline;
      transform: translateY(-3px);
+     color:#ff6f61 ;
 }
 
 /* FOOTER */
