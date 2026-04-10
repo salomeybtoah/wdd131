@@ -42,7 +42,7 @@ nav ul {
 nav a {
     display: inline-block;
 
-    color: white;
+    color: #fff5e6;
     text-decoration: none;
     font-weight: 600;
 
@@ -553,13 +553,14 @@ footer {
 }
 
 footer a {
-    color: var(--accent);
+    color: #faec2a;
     font-weight: 600;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
+    color: #ff6f61;
 }
 
 /* DESKTOP */
