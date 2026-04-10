@@ -60,7 +60,7 @@ nav a::after {
     width: 0;
     height: 2px;
 
-    background-color: var(--secondary); /* teal line */
+    background-color: var(--accent); /* accent line */
 
     transition: width 0.3s ease;
 }
