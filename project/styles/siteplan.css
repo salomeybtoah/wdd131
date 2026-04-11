@@ -12,7 +12,6 @@
     --light: #e0f2f1;
     --white: #ffffff;
     --text: #222;
-    --light-white: #f9fafb;
      --accent: #ff6f61;
 }
 
@@ -20,7 +19,10 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--light);
-    color: var(--text);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;   /* 🔥 forces full screen height */
 }
 
 /* HEADER */
@@ -262,7 +264,7 @@ main h2 {
 
     margin: 1rem 0;      /* 🔥 REMOVE auto */
    width: fit-content;    /* 🔥 no centering */
-   margin-bottom: 1rem;
+   
 }
 
 /* DATA & WEATHER */
@@ -320,16 +322,6 @@ main h2 {
 }
 /* FORM */
 /* ===== FORM CONTAINER ===== */
-.form-section {
-    max-width: 500px;
-    margin: 3rem auto;
-    padding: 2rem;
-
-    background-color: var(--white);
-    border-radius: 10px;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
 
 /* TITLE */
 .form-section {
@@ -529,14 +521,6 @@ input::placeholder {
 }
 
 /* FOOTER */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--light);
-
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;   /* 🔥 forces full screen height */
-}
 
 footer {
     background-color: var(--primary);   /* 🔥 color now shows */
@@ -605,11 +589,7 @@ footer a:hover {
 
         width: auto;
         max-width: 80%;
-
-        padding-top: 0px;
-        padding-right: 12px;
-        padding-bottom: 8px;
-        padding-left: 12px;
+        padding: 0px 12px 8px 12px;
 
         background: rgba(255, 255, 255, 0.6);
         border-radius: 6px;
@@ -619,7 +599,7 @@ footer a:hover {
 
     .hero-text h2 {
     font-size: 2.2rem;
-    text-align: center !important;
+    text-align: center;
     display: block;
     width: 100%;
     margin: 0 auto 0.5rem auto;
@@ -631,6 +611,23 @@ footer a:hover {
         font-size: 1rem;
         line-height: 1.4;     /* clean wrapping */
         margin: 0;
+    }
+
+     .featured h2 {
+        white-space: nowrap;  /* Keeps "Featured Destinations" on one line */
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+     .hero {
+        margin-top: 1rem;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 320px;         /* increase image height */
+        object-fit: cover;     /* keeps image neat */
+        display: block;
     }
 }
 
@@ -649,33 +646,5 @@ footer a:hover {
 
     .hero-text p {
         font-size: 0.95rem;
-    }
-}
-
-/* 🔥 ADD THIS NEW SECTION FOR FEATURED DESTINATIONS */
-@media (max-width: 767px) {
-    .featured h2 {
-        white-space: nowrap;  /* Keeps "Featured Destinations" on one line */
-        font-size: 1.5rem;
-        padding: 0.5rem 1rem;
-    }
-}
-
-/* MOBILE HERO IMAGE HEIGHT FIX */
-@media (max-width: 767px) {
-
-    .hero {
-        margin-top: 1rem;
-    }
-
-    .hero img {
-        width: 100%;
-        height: 320px;         /* increase image height */
-        object-fit: cover;     /* keeps image neat */
-        display: block;
-    }
-
-    .hero-text {
-        top: 40% !important;   /* now this will actually move lower */
     }
 }
